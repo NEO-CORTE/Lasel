@@ -2,14 +2,16 @@
 using namespace std;
 class Tree {
 private:
+
+public:
 	int height;
+	int width;
 	string color;
 	char znak;
 	int** tab;
 	int x;
 	int y;
-public:
 	void drawTree();
-	Tree(int h ,const string c, char z, int xl, int yl);
+	Tree(int h , string c, char z);
 	~Tree();
 };

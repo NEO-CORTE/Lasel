@@ -1,13 +1,14 @@
 #include <iostream>
 #include "tree.h"
 #include <vector>
-using namespace std;
-
 class Forest {
-public:
+private:
+    int H, W;
     vector <Tree*>wektor;
-    void AddTree(Tree* t)
-    {
-        wektor.push_back(t);
-    }
+    int** tab;
+public:
+    void AddTree(int h, string c, char z, int y, int x);
+    void printLas();
+    Forest(int h, int w);
+    ~Forest();
 };

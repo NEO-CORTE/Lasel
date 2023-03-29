@@ -2,6 +2,7 @@
 #include "tree.h"
 using namespace std;
 void Tree::drawTree() {
+	
 	for (int j = 0; j < height; j++) {
 		for (int i = 0; i < 2 * height - 1; i++) {
 			if (tab[j][i] == 0) {
@@ -15,16 +16,15 @@ void Tree::drawTree() {
 		cout << "\n";
 	}
 }
-Tree::Tree(int h,const string c, char z, int xl, int yl) {
+Tree::Tree(int h, string c, char z) {
 	height = h;
 	color = c;
 	znak = z;
-	x = xl;
-	y = yl;
+	width = 2 * h - 1;
 	tab = new int* [height];
 	for (int j = 0; j < height; j++) {
-		tab[j] = new int[2 * height - 1];
-		for (int i = 0; i < 2 * height - 1; i++)
+		tab[j] = new int[width];
+		for (int i = 0; i < width; i++)
 			tab[j][i] = 0;
 	}
 	for (int j = 0; j < height; j++)
@@ -33,7 +33,6 @@ Tree::Tree(int h,const string c, char z, int xl, int yl) {
 }
 Tree::~Tree() {
 	int j;
-	cout << "kasuje drzewo\n";
 	for (j = 0; j < height; j++)
 		delete tab[j];
 	delete tab;

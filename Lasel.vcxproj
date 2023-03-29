@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Forest.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="tree.cpp" />
   </ItemGroup>

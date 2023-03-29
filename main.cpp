@@ -4,15 +4,11 @@ using namespace std;
 
 int main()
 {
+	int i, j;
+	Forest las = Forest(15, 60);
+	las.AddTree(5, "green", '#', 3, 2);
+	las.AddTree(6, "green", 'Z', 8, 5);
+	las.AddTree(7, "green", 'B', 10, 12);
 
-	Forest f;
-	Tree* drzewo1 = new Tree(5, "green", '*', 2, 3);
-	Tree* drzewo2 = new Tree(5, "green", 'L', 5, 6);
-	Tree* drzewo3 = new Tree(5, "green", 'I', 7, 2);
-	f.AddTree(drzewo1);
-	f.AddTree(drzewo2);
-	f.AddTree(drzewo3);
-	delete(drzewo1);
-	delete(drzewo2);
-	delete(drzewo3);
+	las.printLas();
 }
